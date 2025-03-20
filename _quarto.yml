@@ -49,10 +49,10 @@ website:
           # - type17.qmd
           # - type18.qmd
       
-      - text: "Docs"
-        icon: github
-        href: https://github.com/daniella-wilkinson/pokemon-data-center
-        aria-label: GitHub
+      # - text: "Docs"
+      #   icon: github
+      #   href: https://github.com/daniella-wilkinson/pokemon-data-center
+      #   aria-label: GitHub
       
   page-footer:
     background: light

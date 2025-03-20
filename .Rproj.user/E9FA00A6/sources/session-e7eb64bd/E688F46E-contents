@@ -1,0 +1,32 @@
+---
+title: "Welcome Trainer!"
+subtitle: |
+  Explore, analyze, and master the Pokédex with ease—your interactive,  accessible, and engaging guide to Pokémon metadata. Dive into the data  to discover what makes each region distinct, and explore the intricate  relationships between species, climate, and geography.
+  
+title-block-banner: true
+title-block-style: default
+
+page-layout: full
+---
+
+![](images/pokemon images/paldea-bg.png){fig-align="center" width="500"}
+
+## Pokémon Data Center
+
+This resource is an interactive codebook designed to make exploring the Pokédex intuitive, engaging, and accessible for all users. Unlike traditional static codebooks that simply provide information, this interactive version allows users to engage directly with the data. This dynamic approach makes it easier to analyze patterns, compare Pokémon attributes, and gain insights in real-time. Whether you are a researcher, educator, or enthusiast, this codebook offers a seamless way to navigate the Pokédex, providing both an educational and enjoyable experience. Furthermore, this resource emphasizes convenience and cost-effectiveness. As an open-access tool available online, it eliminates the need for expensive software or exclusive memberships. Users can explore the Pokédex freely, making this codebook an invaluable asset for independent learners, educators designing coursework, or researchers conducting statistical analyses.
+
+This resource will be valuable for trainers of all backgrounds interested in data analysis. As I continue to develop the data center, we can improve this resource together. I encourage trainers to regularly utilize this resource to practice their data analysis skills.
+
+## Markup, Markdown
+
+Quarto is a powerful, multi-language publishing system designed to be the next-generation evolution of R Markdown. Posit PBC acquired RStudio in November 2022 and introduced Quarto, an enhanced dynamic and reproducible document creation tool, without plans to deprecate R Markdown or R Notebook. This ensures that long-time users of R Markdown can continue using their existing workflows while benefiting from Quarto’s expanded capabilities. Quarto provides seamless support for multiple programming languages, including R, Python, Julia, and Observable JavaScript, making it a flexible solution for data scientists, researchers, and analysts across different platforms. With a strong emphasis on accessibility and ease of use, Quarto maintains an interface and command structure nearly identical to R Markdown, allowing users to transition smoothly.
+
+### Quarto
+
+Quarto is a powerful, multi-language publishing system designed to be the next-generation evolution of R Markdown. Posit PBC acquired RStudio in November 2022 and introduced Quarto, an enhanced dynamic and reproducible document creation tool, without plans to deprecate R Markdown or R Notebook. This ensures that long-time users of R Markdown can continue using their existing workflows while benefiting from Quarto’s expanded capabilities. Quarto provides seamless support for multiple programming languages, including R, Python, Julia, and Observable JavaScript, making it a flexible solution for data scientists, researchers, and analysts across different platforms. With a strong emphasis on accessibility and ease of use, Quarto maintains an interface and command structure nearly identical to R Markdown, allowing users to transition smoothly.
+
+One of Quarto’s most notable strengths is its diverse output formats, enabling users to create high-quality PDFs, interactive websites, presentations, dashboards, and web applications. Its enhanced publishing options make it well-suited for producing technical reports, academic papers, books, and scientific journals. Additionally, Quarto integrates well with modern tools like GitHub Pages and Decap (Netlify), streamlining the process of sharing results with a broader audience. With these improvements, Quarto represents a significant step forward in dynamic document generation. It offers greater flexibility, multi-language functionality, and a wider range of publishing capabilities while retaining the familiarity of R Markdown for existing users.
+
+### Activity 1
+
+### Activity 2 

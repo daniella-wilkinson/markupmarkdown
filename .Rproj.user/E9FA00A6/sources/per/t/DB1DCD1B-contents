@@ -1,0 +1,316 @@
+---
+title: "Region 3 | Hoenn"
+subtitle: |
+  Explore, analyze, and master the Pokédex with ease—your interactive,  accessible, and engaging guide to Pokémon metadata. Dive into the data  to discover what makes each region distinct, and explore the intricate  relationships between species, climate, and geography.
+
+title-block-banner: true
+title-block-style: default
+  
+page-layout: full
+---
+
+```{r setup.1}
+#| include: false
+
+library(haven)
+library(ggplot2)
+library(reactable)
+
+###############################################################################################
+
+pokedex <- read.csv("pokedex.csv"); pokedex$X <- NULL
+pokedex.type <- read.csv("pokedex.type.csv"); pokedex.type$X <- NULL
+
+###############################################################################################
+
+region.3 <- subset(pokedex, Region == "Hoenn", c(
+  Region, ID, Name, Type, Legendary, Sex, Height,
+  Height.ft, Height.Class, Weight, Weight.lbs, Weight.Class, Health, Attack,
+  Sp.Attack, Defense, Sp.Defense, Speed, Total, Abilities
+))
+
+reg_type.3 <- subset(pokedex.type,Region == "Hoenn", c(
+  Region, ID, Name, Type, Legendary, Sex, Height,
+  Height.ft, Height.Class, Weight, Weight.lbs, Weight.Class, Health, Attack, 
+  Sp.Attack, Defense, Sp.Defense, Speed, Total, Abilities
+))
+```
+
+# Pokédex
+
+Understanding the distribution of Pokémon types across different regions provides valuable insight into how geography and environment shape the Pokémon world. By analyzing type frequency by region, we can identify patterns in how certain types thrive in specific landscapes. For example, water types are more prevalent in island regions like Alola, while rock- and ground types dominate arid areas like Hoenn's.
+
+```{r pokedex}
+#| echo: false
+
+reg_table.3 <- subset(region.3, , c(
+  ID, Name, Type, Health, Attack, Sp.Attack,
+  Defense, Sp.Defense, Speed, Total
+  ))
+
+###############################################################################################
+
+colnames(reg_table.3)[colnames(reg_table.3) == "Sp.Attack"] <- "Attack+"
+colnames(reg_table.3)[colnames(reg_table.3) == "Sp.Defense"] <- "Defense+"
+
+color.scales <- function(x) rgb(colorRamp(c(
+  "white", "#C7DB9C"))(x),
+  maxColorValue = 255)
+
+###############################################################################################
+
+reactable(
+  reg_table.3,
+  
+  style = list(fontFamily = "Arial, sans-serif"),
+  
+  # column styling 
+  
+  defaultColDef = colDef(
+    style = list(fontFamily = "Arial, sans-serif"),
+    align = "center",
+    vAlign = "center",
+    minWidth = 70,
+    headerStyle = list(background = "#f7f7f8")
+  ),
+  
+  columns = list(
+    # color scales : col 1
+    
+    Health = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$Health)) / 
+        (max(reg_table.3$Health) - min(reg_table.3$Health))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 2
+    
+    Attack = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$Attack)) / 
+        (max(reg_table.3$Attack) - min(reg_table.3$Attack))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 3
+    
+    `Attack+` = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$`Attack+`)) / 
+        (max(reg_table.3$`Attack+`) - min(reg_table.3$`Attack+`))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 4
+    
+    Defense = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$Defense)) / 
+        (max(reg_table.3$Defense) - min(reg_table.3$Defense))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 5
+    
+    `Defense+` = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$`Defense+`)) / 
+        (max(reg_table.3$`Defense+`) - min(reg_table.3$`Defense+`))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 6
+    
+    Speed = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$Speed)) / 
+        (max(reg_table.3$Speed) - min(reg_table.3$Speed))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # color scales : col 7
+    
+    Total = colDef(style = function(value) {
+      normalized <- (value - min(reg_table.3$Total)) / 
+        (max(reg_table.3$Total) - min(reg_table.3$Total))
+      color <- color.scales(normalized)
+      list(background = color)
+    }),
+    
+    # column revisions 
+    
+    ID = colDef(minWidth = 50, filterable = FALSE),
+    Name = colDef(minWidth = 80, filterable = FALSE)
+  ),
+  
+  # table styling
+  # filterable = TRUE, minRows = 10,
+  filterable = TRUE,
+  searchable = TRUE,
+  borderless = TRUE,
+  
+  # page parameter(s)
+  defaultPageSize = 10
+)
+```
+
+# Pokédex Profile
+
+## Pokémon Type Distribution
+
+```{r type.dist}
+#| eval: false
+#| include: false
+
+ggplot(reg_type.3, aes(x = Type)) +
+  geom_bar(fill = "#C7DB9C") +
+  ggtitle("Pokémon Type Distribution in Kanto") +
+  labs(x = "Pokémon Type", y = "Frequency") + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+This demonstration explores the distribution of Pokémon types across different regions, revealing how geography and environment influence the Pokémon world. By analyzing type frequency by region, users can identify patterns in how certain types thrive in specific landscapes. The interactive visualizations allow trainers to compare regional ecosystems, uncover trends, and gain a deeper understanding of the relationship between Pokémon habitats and their elemental traits. Designed for educators, researchers, and enthusiasts, this resource bridges the gap between game-play and data analysis, offering an engaging and accessible way to explore Pokémon metadata.
+
+Understanding the distribution of Pokémon types across different regions provides valuable insight into how geography and environment shape the Pokémon world. By analyzing type frequency by region, we can identify patterns in how certain types thrive in specific landscapes. For example, water types are more prevalent in island regions like Alola, while rock- and ground types dominate arid areas like Hoenn's deserts and Sinnoh's mountainous terrain. This analysis highlights the ecological diversity within each region and deepens our understanding of how Pokémon adapt to their surroundings.
+
+Beyond identifying patterns, this analysis enhances strategic decision-making for trainers and researchers. Understanding which types are most common in each region can help trainers anticipate challenges, build balanced teams, and appreciate the environmental influences on Pokémon availability. For researchers, these insights provide a deeper look into how the Pokémon world mirrors real-world biodiversity, reinforcing the connection between habitat, adaptation, and survival. By engaging with this data, users can uncover new perspectives on the Pokémon universe and explore the dynamic relationship between nature and Pokémon distribution.
+
+## Pokémon Attribute Distribution
+
+```{r health.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Health)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Health Distribution in Kanto",
+    x = "Total Health",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r attack.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Attack)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Attack Distribution in Kanto",
+    x = "Total Attack",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r sp.attack.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Sp.Attack)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Attack+ Distribution in Kanto",
+    x = "Total Attack+",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r defense.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Defense)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Defense Distribution in Kanto",
+    x = "Total Defense",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r sp.defense.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Sp.Defense)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Defense+ Distribution in Kanto",
+    x = "Total Defense+",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r speed.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Speed)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Speed Distribution in Kanto",
+    x = "Total Speed",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+```{r power.dist}
+#| eval: false
+#| include: false
+
+ggplot(region.3, aes(x = Total)) + 
+  geom_histogram(binwidth = 10, fill = "#C7DB9C", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Power Distribution in Kanto",
+    x = "Total Total",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+::: panel-tabset
+## Health
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Attack
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Attack+
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Defense
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Defense+
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Speed
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+
+## Total
+
+![](images/figure1-01.png){fig-align="center" width="700"}
+:::
+
+This demonstration explores the distribution of Pokémon types across different regions, revealing how geography and environment influence the Pokémon world. By analyzing type frequency by region, users can identify patterns in how certain types thrive in specific landscapes. The interactive visualizations allow trainers to compare regional ecosystems, uncover trends, and gain a deeper understanding of the relationship between Pokémon habitats and their elemental traits. Designed for educators, researchers, and enthusiasts, this resource bridges the gap between game-play and data analysis, offering an engaging and accessible way to explore Pokémon metadata.
+
+Understanding the distribution of Pokémon types across different regions provides valuable insight into how geography and environment shape the Pokémon world. By analyzing type frequency by region, we can identify patterns in how certain types thrive in specific landscapes. For example, water types are more prevalent in island regions like Alola, while rock- and ground types dominate arid areas like Hoenn's deserts and Sinnoh's mountainous terrain. This analysis highlights the ecological diversity within each region and deepens our understanding of how Pokémon adapt to their surroundings.
+
+Beyond identifying patterns, this analysis enhances strategic decision-making for trainers and researchers. Understanding which types are most common in each region can help trainers anticipate challenges, build balanced teams, and appreciate the environmental influences on Pokémon availability. For researchers, these insights provide a deeper look into how the Pokémon world mirrors real-world biodiversity, reinforcing the connection between habitat, adaptation, and survival. By engaging with this data, users can uncover new perspectives on the Pokémon universe and explore the dynamic relationship between nature and Pokémon distribution.

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Region 7 : Alola – Pokémon Data Center</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-681d603fdaf5436f69a314a6cf5c46a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Pokémon Data Center</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Get Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lessons.html"> 
+<span class="menu-text">Get Trained</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pokedex.html"> 
+<span class="menu-text">Pokédex</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-by-region" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">By Region</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-by-region">    
+        <li>
+    <a class="dropdown-item" href="./region1.html">
+ <span class="dropdown-text">Region 1 : Kanto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region2.html">
+ <span class="dropdown-text">Region 2 : Johto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region3.html">
+ <span class="dropdown-text">Region 3 : Hoenn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region4.html">
+ <span class="dropdown-text">Region 4 : Sinnoh</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region5.html">
+ <span class="dropdown-text">Region 5 : Unova</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region6.html">
+ <span class="dropdown-text">Region 6 : Kalos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region7.html">
+ <span class="dropdown-text">Region 7 : Alola</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region8.html">
+ <span class="dropdown-text">Region 8 : Galar</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./region9.html">
+ <span class="dropdown-text">Region 9 : Paldea</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/daniella-wilkinson/pokemon-data-center"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text">Docs</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Region 7 : Alola</h1>
+            <p class="subtitle lead"></p><p>Explore, analyze, and master the Pokédex with ease—your interactive, accessible, and engaging guide to Pokémon metadata. Dive into the data to discover what makes each region distinct, and explore the intricate relationships between species, climate, and geography.</p><p></p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pokédex" id="toc-pokédex" class="nav-link active" data-scroll-target="#pokédex">Pokédex</a></li>
+  <li><a href="#pokédex-profile" id="toc-pokédex-profile" class="nav-link" data-scroll-target="#pokédex-profile">Pokédex Profile</a>
+  <ul class="collapse">
+  <li><a href="#pokémon-type-distribution" id="toc-pokémon-type-distribution" class="nav-link" data-scroll-target="#pokémon-type-distribution">Pokémon Type Distribution</a></li>
+  <li><a href="#pokémon-attribute-distribution" id="toc-pokémon-attribute-distribution" class="nav-link" data-scroll-target="#pokémon-attribute-distribution">Pokémon Attribute Distribution</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/pokemon images/alola-bg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/pokemon images/alola-bg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></a></p>
+</figure>
+</div>
+<p>Alola is based on the Hawaiian Islands, featuring a tropical archipelago with distinct islands, each offering unique biomes. The region departs from the traditional Pokémon League structure, replacing it with the Island Challenge, which reflects the real-world cultural practices of Hawaiian rites of passage. Alola’s environment is vibrant, with active volcanoes, lush jungles, coral reefs, and sandy beaches. The region’s towns and settlements are designed to blend seamlessly with nature, emphasizing an eco-friendly and harmonious way of life.</p>
+<p>The inspiration behind Alola extends beyond its geography to its culture and mythology. The Tapu guardians resemble Hawaiian deities, protecting each island while deeply ingrained in local traditions. The Legendary Pokémon Solgaleo and Lunala represent celestial forces, further enhancing the region’s spiritual undertones. Alola’s relaxed atmosphere and strong sense of community create an immersive experience, making it one of the most culturally distinct Pokémon regions.</p>
+<section id="pokédex" class="level1">
+<h1>Pokédex</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-3681f879e604172e0069" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3681f879e604172e0069">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"ID":[20,26,27,28,37,38,50,51,52,53,74,75,76,88,89,103,105,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,741,741,741,742,743,744,744,745,745,745,746,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,800,800,800,801,802,803,804,805,806,807,808,809],"Name":["Raticate\nAlolan Raticate","Raichu\nAlolan Raichu","Sandshrew\nAlolan Sandshrew","Sandslash\nAlolan Sandslash","Vulpix\nAlolan Vulpix","Ninetales\nAlolan Ninetales","Diglett\nAlolan Diglett","Dugtrio\nAlolan Dugtrio","Meowth\nAlolan Meowth","Persian\nAlolan Persian","Geodude\nAlolan Geodude","Graveler\nAlolan Graveler","Golem\nAlolan Golem","Grimer\nAlolan Grimer","Muk\nAlolan Muk","Exeggutor\nAlolan Exeggutor","Marowak\nAlolan Marowak","Rowlet","Dartrix","Decidueye","Litten","Torracat","Incineroar","Popplio","Brionne","Primarina","Pikipek","Trumbeak","Toucannon","Yungoos","Gumshoos","Grubbin","Charjabug","Vikavolt","Crabrawler","Crabominable","Oricorio\nBaile Style","Oricorio\nPom-Pom Style","Oricorio\nPa'u Style","Oricorio\nSensu Style","Cutiefly","Ribombee","Rockruff","Rockruff\nOwn Tempo Rockruff","Lycanroc\nMidday Form","Lycanroc\nMidnight Form","Lycanroc\nDusk Form","Wishiwashi\nSolo Form","Wishiwashi\nSchool Form","Mareanie","Toxapex","Mudbray","Mudsdale","Dewpider","Araquanid","Fomantis","Lurantis","Morelull","Shiinotic","Salandit","Salazzle","Stufful","Bewear","Bounsweet","Steenee","Tsareena","Comfey","Oranguru","Passimian","Wimpod","Golisopod","Sandygast","Palossand","Pyukumuku","Type: Null","Silvally","Minior\nMeteor Form","Minior\nCore Form","Komala","Turtonator","Togedemaru","Mimikyu","Bruxish","Drampa","Dhelmise","Jangmo-o","Hakamo-o","Kommo-o","Tapu Koko","Tapu Lele","Tapu Bulu","Tapu Fini","Cosmog","Cosmoem","Solgaleo","Lunala","Nihilego","Buzzwole","Pheromosa","Xurkitree","Celesteela","Kartana","Guzzlord","Necrozma","Necrozma\nDusk Mane Necrozma","Necrozma\nDawn Wings Necrozma","Necrozma\nUltra Necrozma","Magearna","Marshadow","Poipole","Naganadel","Stakataka","Blacephalon","Zeraora","Meltan","Melmetal"],"Type":["Dark, Normal","Electric, Psychic","Ice, Steel","Ice, Steel","Ice","Ice, Fairy","Ground, Steel","Ground, Steel","Dark","Dark","Rock, Electric","Rock, Electric","Rock, Electric","Poison, Dark","Poison, Dark","Grass, Dragon","Fire, Ghost","Grass, Flying","Grass, Flying","Grass, Ghost","Fire","Fire","Fire, Dark","Water","Water","Water, Fairy","Normal, Flying","Normal, Flying","Normal, Flying","Normal","Normal","Bug","Bug, Electric","Bug, Electric","Fighting","Fighting, Ice","Fire, Flying","Electric, Flying","Psychic, Flying","Ghost, Flying","Bug, Fairy","Bug, Fairy","Rock","Rock","Rock","Rock","Rock","Water","Water","Poison, Water","Poison, Water","Ground","Ground","Water, Bug","Water, Bug","Grass","Grass","Grass, Fairy","Grass, Fairy","Poison, Fire","Poison, Fire","Normal, Fighting","Normal, Fighting","Grass","Grass","Grass","Fairy","Normal, Psychic","Fighting","Bug, Water","Bug, Water","Ghost, Ground","Ghost, Ground","Water","Normal","Normal","Rock, Flying","Rock, Flying","Normal","Fire, Dragon","Electric, Steel","Ghost, Fairy","Water, Psychic","Normal, Dragon","Ghost, Grass","Dragon","Dragon, Fighting","Dragon, Fighting","Electric, Fairy","Psychic, Fairy","Grass, Fairy","Water, Fairy","Psychic","Psychic","Psychic, Steel","Psychic, Ghost","Rock, Poison","Bug, Fighting","Bug, Fighting","Electric","Steel, Flying","Grass, Steel","Dark, Dragon","Psychic","Psychic, Steel","Psychic, Ghost","Psychic, Dragon","Steel, Fairy","Fighting, Ghost","Poison","Poison, Dragon","Rock, Steel","Fire, Ghost","Electric","Steel","Steel"],"Health":[75,60,50,75,38,73,10,35,40,65,40,55,80,80,105,95,60,68,78,78,45,65,95,50,60,80,35,55,80,48,88,47,57,77,47,97,75,75,75,75,40,60,45,45,75,85,75,45,45,50,50,70,100,38,68,40,70,40,60,48,68,70,120,42,52,72,51,90,100,25,75,55,85,55,95,95,60,60,65,60,65,55,68,78,70,45,55,75,70,70,70,70,43,43,137,137,109,107,71,83,97,59,223,97,97,97,97,80,90,67,73,61,53,88,46,135],"Attack":[71,85,75,100,41,67,55,100,35,60,80,95,120,80,105,105,80,55,75,107,65,85,115,54,69,74,75,85,120,70,110,62,82,70,82,132,70,70,70,70,45,55,65,65,115,115,117,20,140,53,63,100,125,40,70,55,105,35,45,44,64,75,125,30,40,120,52,60,120,35,125,55,75,60,95,95,60,100,115,78,98,90,105,60,131,55,75,110,115,85,130,75,29,29,137,113,53,139,137,89,101,181,101,107,157,113,167,95,125,73,73,131,127,112,65,143],"Attack+":[40,95,10,25,50,81,35,50,50,75,30,45,55,40,65,125,50,50,70,100,60,80,80,66,91,126,30,40,75,30,55,55,55,145,42,62,98,98,98,98,55,95,30,30,55,55,55,25,140,43,53,45,55,40,50,50,80,65,90,71,111,45,55,30,40,50,82,90,40,20,60,70,100,30,95,95,60,100,75,91,40,50,70,135,86,45,65,100,95,130,85,95,29,29,113,137,127,53,137,173,107,59,97,127,113,157,167,130,90,73,127,53,151,102,55,80],"Defense":[70,50,90,120,40,75,30,60,35,60,100,115,130,50,75,85,110,55,75,75,40,50,90,54,69,74,30,50,75,30,60,45,95,90,57,77,70,70,70,70,40,60,40,40,65,75,65,20,130,62,152,70,100,52,92,35,90,55,80,40,60,50,80,38,48,98,90,80,90,40,140,80,110,130,95,95,100,60,65,135,63,80,70,85,100,65,90,125,85,75,115,115,31,131,107,89,47,139,37,71,103,131,53,101,127,109,97,115,80,67,73,211,53,75,65,143],"Defense+":[80,85,35,65,65,100,45,70,40,65,30,45,65,50,100,75,80,50,70,100,40,50,90,56,81,116,30,50,75,30,60,45,75,75,47,67,70,70,70,70,40,70,40,40,65,75,65,25,135,52,142,55,85,72,132,35,90,75,100,40,60,50,60,38,48,98,110,110,60,30,90,45,75,130,95,95,100,60,95,85,73,105,70,91,90,45,70,105,75,115,95,130,31,131,89,107,131,53,37,71,101,31,53,89,109,127,97,115,90,67,73,101,79,80,35,65],"Speed":[77,110,40,65,65,109,90,110,90,115,20,35,45,25,50,45,45,42,52,70,70,90,60,40,50,60,65,75,60,45,45,46,36,43,63,43,93,93,93,93,84,124,60,60,112,82,110,40,30,45,35,45,35,27,42,35,45,15,30,77,117,50,60,32,62,72,100,60,80,80,40,15,35,5,59,95,60,120,65,36,96,96,92,36,40,45,65,85,130,95,75,85,37,37,97,97,103,79,151,83,61,109,43,79,77,77,129,65,125,73,121,13,107,143,34,34],"Total":[413,485,300,450,299,505,265,425,290,440,300,390,495,325,500,530,425,320,420,530,320,420,530,320,420,530,265,355,485,253,418,300,400,500,338,478,476,476,476,476,304,464,280,280,487,487,487,175,620,305,495,385,500,269,454,250,480,285,405,320,480,340,500,210,290,510,485,490,490,230,530,320,480,410,534,570,440,500,480,485,435,476,475,485,517,300,420,600,570,570,570,570,200,400,680,680,570,570,570,570,570,570,570,600,680,680,754,600,600,420,540,570,570,600,300,600]},"columns":[{"id":"ID","name":"ID","type":"numeric","minWidth":50,"align":"center","vAlign":"center","style":{"fontFamily":"Arial, sans-serif"},"headerStyle":{"background":"#f7f7f8"},"filterable":false},{"id":"Name","name":"Name","type":"character","minWidth":80,"align":"center","vAlign":"center","style":{"fontFamily":"Arial, sans-serif"},"headerStyle":{"background":"#f7f7f8"},"filterable":false},{"id":"Type","name":"Type","type":"character","minWidth":70,"align":"center","vAlign":"center","style":{"fontFamily":"Arial, sans-serif"},"headerStyle":{"background":"#f7f7f8"}},{"id":"Health","name":"Health","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FBE8AD"},{"background":"#FCEDC0"},{"background":"#FDF1CD"},{"background":"#FBE8AD"},{"background":"#FDF5DC"},{"background":"#FCE9B0"},{"background":"#FFFFFF"},{"background":"#FDF6DF"},{"background":"#FDF4D9"},{"background":"#FCEBBA"},{"background":"#FDF4D9"},{"background":"#FCEFC6"},{"background":"#FBE6A7"},{"background":"#FBE6A7"},{"background":"#FADD88"},{"background":"#FBE194"},{"background":"#FCEDC0"},{"background":"#FCEAB6"},{"background":"#FBE7AA"},{"background":"#FBE7AA"},{"background":"#FDF2D3"},{"background":"#FCEBBA"},{"background":"#FBE194"},{"background":"#FDF1CD"},{"background":"#FCEDC0"},{"background":"#FBE6A7"},{"background":"#FDF6DF"},{"background":"#FCEFC6"},{"background":"#FBE6A7"},{"background":"#FDF1CF"},{"background":"#FBE39D"},{"background":"#FDF2D0"},{"background":"#FCEEC4"},{"background":"#FBE7AB"},{"background":"#FDF2D0"},{"background":"#FAE092"},{"background":"#FBE8AD"},{"background":"#FBE8AD"},{"background":"#FBE8AD"},{"background":"#FBE8AD"},{"background":"#FDF4D9"},{"background":"#FCEDC0"},{"background":"#FDF2D3"},{"background":"#FDF2D3"},{"background":"#FBE8AD"},{"background":"#FBE4A1"},{"background":"#FBE8AD"},{"background":"#FDF2D3"},{"background":"#FDF2D3"},{"background":"#FDF1CD"},{"background":"#FDF1CD"},{"background":"#FCEAB4"},{"background":"#FADF8E"},{"background":"#FDF5DC"},{"background":"#FCEAB6"},{"background":"#FDF4D9"},{"background":"#FCEAB4"},{"background":"#FDF4D9"},{"background":"#FCEDC0"},{"background":"#FDF1CF"},{"background":"#FCEAB6"},{"background":"#FCEAB4"},{"background":"#F3D87E"},{"background":"#FDF3D7"},{"background":"#FDF0CA"},{"background":"#FCE9B1"},{"background":"#FDF0CB"},{"background":"#FBE39B"},{"background":"#FADF8E"},{"background":"#FEF9EC"},{"background":"#FBE8AD"},{"background":"#FCEFC6"},{"background":"#FBE4A1"},{"background":"#FCEFC6"},{"background":"#FBE194"},{"background":"#FBE194"},{"background":"#FCEDC0"},{"background":"#FCEDC0"},{"background":"#FCEBBA"},{"background":"#FCEDC0"},{"background":"#FCEBBA"},{"background":"#FCEFC6"},{"background":"#FCEAB6"},{"background":"#FBE7AA"},{"background":"#FCEAB4"},{"background":"#FDF2D3"},{"background":"#FCEFC6"},{"background":"#FBE8AD"},{"background":"#FCEAB4"},{"background":"#FCEAB4"},{"background":"#FCEAB4"},{"background":"#FCEAB4"},{"background":"#FDF3D5"},{"background":"#FDF3D5"},{"background":"#D5D293"},{"background":"#D5D293"},{"background":"#FADC83"},{"background":"#FADD85"},{"background":"#FCE9B2"},{"background":"#FBE5A3"},{"background":"#FAE092"},{"background":"#FCEDC1"},{"background":"#3DB2FF"},{"background":"#FAE092"},{"background":"#FAE092"},{"background":"#FAE092"},{"background":"#FAE092"},{"background":"#FBE6A7"},{"background":"#FBE39B"},{"background":"#FCEBB7"},{"background":"#FCE9B0"},{"background":"#FCEDBF"},{"background":"#FCF0C9"},{"background":"#FBE39D"},{"background":"#FDF2D2"},{"background":"#D9D391"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Attack","name":"Attack","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FBE7AA"},{"background":"#FAE193"},{"background":"#FBE5A4"},{"background":"#FADA7A"},{"background":"#FDF5DC"},{"background":"#FCE9B1"},{"background":"#FCEEC5"},{"background":"#FADA7A"},{"background":"#FEF8E6"},{"background":"#FCECBC"},{"background":"#FBE39B"},{"background":"#FADC83"},{"background":"#CCD09A"},{"background":"#FBE39B"},{"background":"#EFD781"},{"background":"#EFD781"},{"background":"#FBE39B"},{"background":"#FCEEC5"},{"background":"#FBE5A4"},{"background":"#EAD684"},{"background":"#FCEAB4"},{"background":"#FAE193"},{"background":"#D7D291"},{"background":"#FCEFC6"},{"background":"#FBE8AE"},{"background":"#FBE6A5"},{"background":"#FBE5A4"},{"background":"#FAE193"},{"background":"#CCD09A"},{"background":"#FBE8AC"},{"background":"#E3D589"},{"background":"#FCEBB9"},{"background":"#FBE298"},{"background":"#FBE8AC"},{"background":"#FBE298"},{"background":"#B0CAAE"},{"background":"#FBE8AC"},{"background":"#FBE8AC"},{"background":"#FBE8AC"},{"background":"#FBE8AC"},{"background":"#FDF3D5"},{"background":"#FCEEC5"},{"background":"#FCEAB4"},{"background":"#FCEAB4"},{"background":"#D7D291"},{"background":"#D7D291"},{"background":"#D3D195"},{"background":"#FFFFFF"},{"background":"#9DC6BB"},{"background":"#FCEFC8"},{"background":"#FCEBB7"},{"background":"#FADA7A"},{"background":"#C0CDA2"},{"background":"#FDF5DD"},{"background":"#FBE8AC"},{"background":"#FCEEC5"},{"background":"#EFD781"},{"background":"#FEF8E6"},{"background":"#FDF3D5"},{"background":"#FDF3D7"},{"background":"#FCEAB6"},{"background":"#FBE5A4"},{"background":"#C0CDA2"},{"background":"#FEFAEE"},{"background":"#FDF5DD"},{"background":"#CCD09A"},{"background":"#FDF0CA"},{"background":"#FCECBC"},{"background":"#CCD09A"},{"background":"#FEF8E6"},{"background":"#C0CDA2"},{"background":"#FCEEC5"},{"background":"#FBE5A4"},{"background":"#FCECBC"},{"background":"#FADC83"},{"background":"#FADC83"},{"background":"#FCECBC"},{"background":"#FADA7A"},{"background":"#D7D291"},{"background":"#FBE49F"},{"background":"#FADB7E"},{"background":"#FADE8B"},{"background":"#EFD781"},{"background":"#FCECBC"},{"background":"#B2CAAC"},{"background":"#FCEEC5"},{"background":"#FBE5A4"},{"background":"#E3D589"},{"background":"#D7D291"},{"background":"#FAE193"},{"background":"#B4CBAA"},{"background":"#FBE5A4"},{"background":"#FEFAF0"},{"background":"#FEFAF0"},{"background":"#A4C7B6"},{"background":"#DCD38E"},{"background":"#FCEFC8"},{"background":"#9FC6B9"},{"background":"#A4C7B6"},{"background":"#FADF8D"},{"background":"#F8D97A"},{"background":"#3DB2FF"},{"background":"#F8D97A"},{"background":"#EAD684"},{"background":"#75BDD7"},{"background":"#DCD38E"},{"background":"#5DB8E7"},{"background":"#FADC83"},{"background":"#C0CDA2"},{"background":"#FBE6A7"},{"background":"#FBE6A7"},{"background":"#B2CAAC"},{"background":"#BBCCA5"},{"background":"#DFD48D"},{"background":"#FCEAB4"},{"background":"#96C4C0"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Attack+","name":"Attack+","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FDF1CE"},{"background":"#F1D87F"},{"background":"#FFFFFF"},{"background":"#FEF8E6"},{"background":"#FCECBD"},{"background":"#FADE8B"},{"background":"#FDF3D6"},{"background":"#FCECBD"},{"background":"#FCECBD"},{"background":"#FBE194"},{"background":"#FDF5DE"},{"background":"#FCEFC5"},{"background":"#FCEAB5"},{"background":"#FDF1CE"},{"background":"#FBE6A5"},{"background":"#ACC9B0"},{"background":"#FCECBD"},{"background":"#FCECBD"},{"background":"#FBE39D"},{"background":"#E6D587"},{"background":"#FBE8AD"},{"background":"#FADF8C"},{"background":"#FADF8C"},{"background":"#FBE5A3"},{"background":"#FADA7A"},{"background":"#A9C9B2"},{"background":"#FDF5DE"},{"background":"#FDF1CE"},{"background":"#FBE194"},{"background":"#FDF5DE"},{"background":"#FCEAB5"},{"background":"#FCEAB5"},{"background":"#FCEAB5"},{"background":"#7DBFD1"},{"background":"#FDF0CA"},{"background":"#FBE7AA"},{"background":"#EAD684"},{"background":"#EAD684"},{"background":"#EAD684"},{"background":"#EAD684"},{"background":"#FCEAB5"},{"background":"#F1D87F"},{"background":"#FDF5DE"},{"background":"#FDF5DE"},{"background":"#FCEAB5"},{"background":"#FCEAB5"},{"background":"#FCEAB5"},{"background":"#FEF8E6"},{"background":"#89C2C9"},{"background":"#FCF0C9"},{"background":"#FCEBB8"},{"background":"#FCEFC5"},{"background":"#FCEAB5"},{"background":"#FDF1CE"},{"background":"#FCECBD"},{"background":"#FCECBD"},{"background":"#FADF8C"},{"background":"#FBE6A5"},{"background":"#FADA7C"},{"background":"#FBE39B"},{"background":"#CCD099"},{"background":"#FCEFC5"},{"background":"#FCEAB5"},{"background":"#FDF5DE"},{"background":"#FDF1CE"},{"background":"#FCECBD"},{"background":"#FADE89"},{"background":"#FADA7C"},{"background":"#FDF1CE"},{"background":"#FEFAEE"},{"background":"#FBE8AD"},{"background":"#FBE39D"},{"background":"#E6D587"},{"background":"#FDF5DE"},{"background":"#F1D87F"},{"background":"#F1D87F"},{"background":"#FBE8AD"},{"background":"#E6D587"},{"background":"#FBE194"},{"background":"#FADA7A"},{"background":"#FDF1CE"},{"background":"#FCECBD"},{"background":"#FBE39D"},{"background":"#95C4C0"},{"background":"#FADC82"},{"background":"#FCEFC5"},{"background":"#FBE6A5"},{"background":"#E6D587"},{"background":"#F1D87F"},{"background":"#A0C7B8"},{"background":"#FADC84"},{"background":"#F1D87F"},{"background":"#FDF6DF"},{"background":"#FDF6DF"},{"background":"#C8CF9D"},{"background":"#90C3C4"},{"background":"#A7C8B3"},{"background":"#FCEBB8"},{"background":"#90C3C4"},{"background":"#3DB2FF"},{"background":"#D6D293"},{"background":"#FBE8AF"},{"background":"#EDD782"},{"background":"#A7C8B3"},{"background":"#C8CF9D"},{"background":"#62B9E4"},{"background":"#4AB4F5"},{"background":"#A0C7B8"},{"background":"#FADA7C"},{"background":"#FBE298"},{"background":"#A7C8B3"},{"background":"#FCEBB8"},{"background":"#70BCDB"},{"background":"#E1D48B"},{"background":"#FCEAB5"},{"background":"#FADF8C"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Defense","name":"Defense","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FCEBB9"},{"background":"#FDF3D5"},{"background":"#FBE39D"},{"background":"#F1D880"},{"background":"#FDF7E3"},{"background":"#FCE9B2"},{"background":"#FEFBF1"},{"background":"#FCEFC7"},{"background":"#FEF9EA"},{"background":"#FCEFC7"},{"background":"#FAE08F"},{"background":"#FADA7A"},{"background":"#DDD38E"},{"background":"#FDF3D5"},{"background":"#FCE9B2"},{"background":"#FBE5A4"},{"background":"#FADC81"},{"background":"#FDF1CE"},{"background":"#FCE9B2"},{"background":"#FCE9B2"},{"background":"#FDF7E3"},{"background":"#FDF3D5"},{"background":"#FBE39D"},{"background":"#FDF1CF"},{"background":"#FCECBA"},{"background":"#FCEAB3"},{"background":"#FEFBF1"},{"background":"#FDF3D5"},{"background":"#FCE9B2"},{"background":"#FEFBF1"},{"background":"#FCEFC7"},{"background":"#FDF5DC"},{"background":"#FBE196"},{"background":"#FBE39D"},{"background":"#FDF0CB"},{"background":"#FCE8AF"},{"background":"#FCEBB9"},{"background":"#FCEBB9"},{"background":"#FCEBB9"},{"background":"#FCEBB9"},{"background":"#FDF7E3"},{"background":"#FCEFC7"},{"background":"#FDF7E3"},{"background":"#FDF7E3"},{"background":"#FCEDC0"},{"background":"#FCE9B2"},{"background":"#FCEDC0"},{"background":"#FFFFFF"},{"background":"#DDD38E"},{"background":"#FCEEC4"},{"background":"#B1CAAC"},{"background":"#FCEBB9"},{"background":"#FAE08F"},{"background":"#FDF2D2"},{"background":"#FBE39A"},{"background":"#FEF9EA"},{"background":"#FBE39D"},{"background":"#FDF1CE"},{"background":"#FBE7AB"},{"background":"#FDF7E3"},{"background":"#FCEFC7"},{"background":"#FDF3D5"},{"background":"#FBE7AB"},{"background":"#FEF8E5"},{"background":"#FDF4D8"},{"background":"#FAE092"},{"background":"#FBE39D"},{"background":"#FBE7AB"},{"background":"#FBE39D"},{"background":"#FDF7E3"},{"background":"#C9CF9C"},{"background":"#FBE7AB"},{"background":"#FADC81"},{"background":"#DDD38E"},{"background":"#FBE196"},{"background":"#FBE196"},{"background":"#FAE08F"},{"background":"#FCEFC7"},{"background":"#FCEDC0"},{"background":"#D3D195"},{"background":"#FCEEC3"},{"background":"#FBE7AB"},{"background":"#FCEBB9"},{"background":"#FBE5A4"},{"background":"#FAE08F"},{"background":"#FCEDC0"},{"background":"#FBE39D"},{"background":"#E7D687"},{"background":"#FBE5A4"},{"background":"#FCE9B2"},{"background":"#FADA7A"},{"background":"#FADA7A"},{"background":"#FEFAEF"},{"background":"#DBD38F"},{"background":"#FADD85"},{"background":"#FBE49E"},{"background":"#FDF4D9"},{"background":"#CBD09A"},{"background":"#FEF8E7"},{"background":"#FCEBB7"},{"background":"#FADE8B"},{"background":"#DBD38F"},{"background":"#FDF2D1"},{"background":"#FADF8E"},{"background":"#E3D58A"},{"background":"#FADC83"},{"background":"#FAE193"},{"background":"#FADA7A"},{"background":"#FBE7AB"},{"background":"#FCECBD"},{"background":"#FCEAB5"},{"background":"#3DB2FF"},{"background":"#FDF2D1"},{"background":"#FCE9B2"},{"background":"#FCEDC0"},{"background":"#C3CEA0"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Defense+","name":"Defense+","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FADC81"},{"background":"#F5D87D"},{"background":"#FEF8E8"},{"background":"#FBE5A4"},{"background":"#FBE5A4"},{"background":"#C4CE9F"},{"background":"#FDF2D1"},{"background":"#FBE298"},{"background":"#FDF5DC"},{"background":"#FBE5A4"},{"background":"#FEFBF3"},{"background":"#FDF2D1"},{"background":"#FBE5A4"},{"background":"#FCEFC6"},{"background":"#C4CE9F"},{"background":"#FADF8D"},{"background":"#FADC81"},{"background":"#FCEFC6"},{"background":"#FBE298"},{"background":"#C4CE9F"},{"background":"#FDF5DC"},{"background":"#FCEFC6"},{"background":"#E4D588"},{"background":"#FCEBB8"},{"background":"#FADB7F"},{"background":"#91C3C3"},{"background":"#FEFBF3"},{"background":"#FCEFC6"},{"background":"#FADF8D"},{"background":"#FEFBF3"},{"background":"#FCE8AF"},{"background":"#FDF2D1"},{"background":"#FADF8D"},{"background":"#FADF8D"},{"background":"#FDF1CC"},{"background":"#FBE49F"},{"background":"#FBE298"},{"background":"#FBE298"},{"background":"#FBE298"},{"background":"#FBE298"},{"background":"#FDF5DC"},{"background":"#FBE298"},{"background":"#FDF5DC"},{"background":"#FDF5DC"},{"background":"#FBE5A4"},{"background":"#FADF8D"},{"background":"#FBE5A4"},{"background":"#FFFFFF"},{"background":"#53B6EF"},{"background":"#FCEDC1"},{"background":"#3DB2FF"},{"background":"#FCECBA"},{"background":"#F5D87D"},{"background":"#FAE194"},{"background":"#5DB8E8"},{"background":"#FEF8E8"},{"background":"#E4D588"},{"background":"#FADF8D"},{"background":"#C4CE9F"},{"background":"#FDF5DC"},{"background":"#FCE8AF"},{"background":"#FCEFC6"},{"background":"#FCE8AF"},{"background":"#FDF6E1"},{"background":"#FDF0CA"},{"background":"#CBD09A"},{"background":"#A4C7B6"},{"background":"#A4C7B6"},{"background":"#FCE8AF"},{"background":"#FEFBF3"},{"background":"#E4D588"},{"background":"#FDF2D1"},{"background":"#FADF8D"},{"background":"#63BAE3"},{"background":"#D4D294"},{"background":"#D4D294"},{"background":"#C4CE9F"},{"background":"#FCE8AF"},{"background":"#D4D294"},{"background":"#F5D87D"},{"background":"#FAE091"},{"background":"#B4CBAA"},{"background":"#FBE298"},{"background":"#E1D48B"},{"background":"#E4D588"},{"background":"#FDF2D1"},{"background":"#FBE298"},{"background":"#B4CBAA"},{"background":"#FADF8D"},{"background":"#94C4C1"},{"background":"#D4D294"},{"background":"#63BAE3"},{"background":"#FEFBF1"},{"background":"#60B9E5"},{"background":"#E8D686"},{"background":"#AEC9AF"},{"background":"#60B9E5"},{"background":"#FCEDBF"},{"background":"#FDF7E3"},{"background":"#FBE196"},{"background":"#C1CEA1"},{"background":"#FEFBF1"},{"background":"#FCEDBF"},{"background":"#E8D686"},{"background":"#A7C8B3"},{"background":"#6DBCDC"},{"background":"#CED098"},{"background":"#94C4C1"},{"background":"#E4D588"},{"background":"#FBE49F"},{"background":"#FAE091"},{"background":"#C1CEA1"},{"background":"#FADC84"},{"background":"#FADC81"},{"background":"#FEF8E8"},{"background":"#FBE5A4"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Speed","name":"Speed","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FADA7B"},{"background":"#A7C8B4"},{"background":"#FCEDBF"},{"background":"#FAE091"},{"background":"#FAE091"},{"background":"#A9C9B2"},{"background":"#DAD38F"},{"background":"#A7C8B4"},{"background":"#DAD38F"},{"background":"#9AC5BD"},{"background":"#FDF7E3"},{"background":"#FCEFC8"},{"background":"#FCEAB6"},{"background":"#FDF4DA"},{"background":"#FBE8AD"},{"background":"#FCEAB6"},{"background":"#FCEAB6"},{"background":"#FCECBB"},{"background":"#FBE7A9"},{"background":"#FADE88"},{"background":"#FADE88"},{"background":"#DAD38F"},{"background":"#FBE39A"},{"background":"#FCEDBF"},{"background":"#FBE8AD"},{"background":"#FBE39A"},{"background":"#FAE091"},{"background":"#FADB7F"},{"background":"#FBE39A"},{"background":"#FCEAB6"},{"background":"#FCEAB6"},{"background":"#FCEAB4"},{"background":"#FCEFC6"},{"background":"#FCEBB9"},{"background":"#FBE195"},{"background":"#FCEBB9"},{"background":"#D3D195"},{"background":"#D3D195"},{"background":"#D3D195"},{"background":"#D3D195"},{"background":"#EAD684"},{"background":"#82C0CD"},{"background":"#FBE39A"},{"background":"#FBE39A"},{"background":"#A1C7B7"},{"background":"#EFD781"},{"background":"#A7C8B4"},{"background":"#FCEDBF"},{"background":"#FDF2D1"},{"background":"#FCEAB6"},{"background":"#FCEFC8"},{"background":"#FCEAB6"},{"background":"#FCEFC8"},{"background":"#FDF3D6"},{"background":"#FCECBB"},{"background":"#FCEFC8"},{"background":"#FCEAB6"},{"background":"#FEF9EC"},{"background":"#FDF2D1"},{"background":"#FADA7B"},{"background":"#95C4C1"},{"background":"#FBE8AD"},{"background":"#FBE39A"},{"background":"#FDF1CD"},{"background":"#FBE297"},{"background":"#FADD84"},{"background":"#C1CDA2"},{"background":"#FBE39A"},{"background":"#F4D87D"},{"background":"#F4D87D"},{"background":"#FCEDBF"},{"background":"#FEF9EC"},{"background":"#FCEFC8"},{"background":"#FFFFFF"},{"background":"#FBE39C"},{"background":"#CDD098"},{"background":"#FBE39A"},{"background":"#8DC2C6"},{"background":"#FAE091"},{"background":"#FCEFC6"},{"background":"#CBD09A"},{"background":"#CBD09A"},{"background":"#D5D293"},{"background":"#FCEFC6"},{"background":"#FCEDBF"},{"background":"#FCEAB6"},{"background":"#FAE091"},{"background":"#E7D686"},{"background":"#73BDD8"},{"background":"#CDD098"},{"background":"#FADB7F"},{"background":"#E7D686"},{"background":"#FCEEC4"},{"background":"#FCEEC4"},{"background":"#C8CF9C"},{"background":"#C8CF9C"},{"background":"#B9CCA7"},{"background":"#F7D97B"},{"background":"#3DB2FF"},{"background":"#EDD783"},{"background":"#FBE298"},{"background":"#A9C9B2"},{"background":"#FCEBB9"},{"background":"#F7D97B"},{"background":"#FADA7B"},{"background":"#FADA7B"},{"background":"#75BED6"},{"background":"#FAE091"},{"background":"#80C0CF"},{"background":"#FADC83"},{"background":"#8AC2C8"},{"background":"#FEFAF0"},{"background":"#AECAAE"},{"background":"#51B6F0"},{"background":"#FDF0CA"},{"background":"#FDF0CA"}],"headerStyle":{"background":"#f7f7f8"}},{"id":"Total","name":"Total","type":"numeric","minWidth":70,"align":"center","vAlign":"center","style":[{"background":"#FAE091"},{"background":"#ECD783"},{"background":"#FCEFC5"},{"background":"#FADB80"},{"background":"#FCEFC6"},{"background":"#DFD48C"},{"background":"#FDF3D5"},{"background":"#FADF8C"},{"background":"#FDF0CA"},{"background":"#FADD85"},{"background":"#FCEFC5"},{"background":"#FBE39C"},{"background":"#E6D588"},{"background":"#FCEBBA"},{"background":"#E2D58A"},{"background":"#CFD098"},{"background":"#FADF8C"},{"background":"#FCECBC"},{"background":"#FADF8E"},{"background":"#CFD098"},{"background":"#FCECBC"},{"background":"#FADF8E"},{"background":"#CFD098"},{"background":"#FCECBC"},{"background":"#FADF8E"},{"background":"#CFD098"},{"background":"#FDF3D5"},{"background":"#FBE7AC"},{"background":"#ECD783"},{"background":"#FDF5DB"},{"background":"#FADF8F"},{"background":"#FCEFC5"},{"background":"#FBE297"},{"background":"#E2D58A"},{"background":"#FCEAB4"},{"background":"#F1D880"},{"background":"#F2D87F"},{"background":"#F2D87F"},{"background":"#F2D87F"},{"background":"#F2D87F"},{"background":"#FCEEC3"},{"background":"#FADA7A"},{"background":"#FDF1CE"},{"background":"#FDF1CE"},{"background":"#EBD684"},{"background":"#EBD684"},{"background":"#EBD684"},{"background":"#FFFFFF"},{"background":"#94C4C1"},{"background":"#FCEEC3"},{"background":"#E6D588"},{"background":"#FBE49E"},{"background":"#E2D58A"},{"background":"#FDF2D3"},{"background":"#FADB7E"},{"background":"#FDF5DC"},{"background":"#EFD781"},{"background":"#FDF0CC"},{"background":"#FBE195"},{"background":"#FCECBC"},{"background":"#EFD781"},{"background":"#FCE9B3"},{"background":"#E2D58A"},{"background":"#FEFAEE"},{"background":"#FDF0CA"},{"background":"#DCD38E"},{"background":"#ECD783"},{"background":"#E9D685"},{"background":"#E9D685"},{"background":"#FEF7E5"},{"background":"#CFD098"},{"background":"#FCECBC"},{"background":"#EFD781"},{"background":"#FAE093"},{"background":"#CCD099"},{"background":"#B5CBAA"},{"background":"#FADD85"},{"background":"#E2D58A"},{"background":"#EFD781"},{"background":"#ECD783"},{"background":"#FADD87"},{"background":"#F2D87F"},{"background":"#F3D87E"},{"background":"#ECD783"},{"background":"#D7D292"},{"background":"#FCEFC5"},{"background":"#FADF8E"},{"background":"#A1C7B8"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#FEFBF3"},{"background":"#FBE297"},{"background":"#6DBCDD"},{"background":"#6DBCDD"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#A1C7B8"},{"background":"#6DBCDD"},{"background":"#6DBCDD"},{"background":"#3DB2FF"},{"background":"#A1C7B8"},{"background":"#A1C7B8"},{"background":"#FADF8E"},{"background":"#C8CF9C"},{"background":"#B5CBAA"},{"background":"#B5CBAA"},{"background":"#A1C7B8"},{"background":"#FCEFC5"},{"background":"#A1C7B8"}],"headerStyle":{"background":"#f7f7f8"}}],"filterable":true,"searchable":true,"defaultPageSize":10,"borderless":true,"style":{"fontFamily":"Arial, sans-serif"},"dataKey":"69b437432e1bd7229b63f60d60206c3a"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="pokédex-profile" class="level1">
+<h1>Pokédex Profile</h1>
+<section id="pokémon-type-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="pokémon-type-distribution">Pokémon Type Distribution</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/type.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="region7_files/figure-html/type.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This demonstration explores the distribution of Pokémon types across different regions, revealing how geography and environment influence the Pokémon world. By analyzing type frequency by region, users can identify patterns in how certain types thrive in specific landscapes. The interactive visualizations allow trainers to compare regional ecosystems, uncover trends, and gain a deeper understanding of the relationship between Pokémon habitats and their elemental traits. Designed for educators, researchers, and enthusiasts, this resource bridges the gap between game-play and data analysis, offering an engaging and accessible way to explore Pokémon metadata.</p>
+<p>Understanding the distribution of Pokémon types across different regions provides valuable insight into how geography and environment shape the Pokémon world. By analyzing type frequency by region, we can identify patterns in how certain types thrive in specific landscapes. This analysis highlights the ecological diversity within each region and deepens our understanding of how Pokémon adapt to their surroundings. Beyond identifying patterns, this analysis enhances strategic decision-making for trainers and researchers. Understanding which types are most common in each region can help trainers anticipate challenges, build balanced teams, and appreciate the environmental influences on Pokémon availability. For researchers, these insights provide a deeper look into how the Pokémon world mirrors real-world biodiversity, reinforcing the connection between habitat, adaptation, and survival. By engaging with this data, users can uncover new perspectives on the Pokémon universe and explore the dynamic relationship between nature and Pokémon distribution.</p>
+</section>
+<section id="pokémon-attribute-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="pokémon-attribute-distribution">Pokémon Attribute Distribution</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Health</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Attack</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Attack+</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Defense</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Defense+</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Speed</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">Total</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/health.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="region7_files/figure-html/health.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/attack.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="region7_files/figure-html/attack.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/sp.attack.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="region7_files/figure-html/sp.attack.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/defense.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="region7_files/figure-html/defense.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/sp.defense.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="region7_files/figure-html/sp.defense.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/speed.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="region7_files/figure-html/speed.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="region7_files/figure-html/total.dist-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="region7_files/figure-html/total.dist-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This analysis examines the distribution of Pokémon attributes, such as base stats, abilities, and typing, across different regions, revealing how these characteristics vary based on regional environments and design philosophies. By evaluating attribute frequency and stat distributions, users can uncover trends in how Pokémon are balanced within their ecosystems. Interactive visualizations allow trainers to compare regional averages, explore outliers, and gain insights into how different factors—such as habitat, evolution, and competitive viability—shape the distribution of Pokémon attributes. This resource is designed for educators, researchers, and enthusiasts, offering an engaging and accessible approach to exploring Pokémon metadata through statistical analysis.</p>
+<p>Understanding the distribution of Pokémon attributes across regions provides valuable insights into game design and strategic planning. By analyzing patterns in base stats, ability prevalence, and type distributions, we can observe how certain attributes are emphasized in specific areas. This analysis highlights regional variation in Pokémon design, from power scaling in later generations to introducing unique abilities that reflect environmental adaptation. By studying these differences, we can better appreciate how Pokémon attributes evolve over time and across different settings. Beyond identifying trends, this analysis enhances strategic decision-making for trainers and researchers. Understanding which stat distributions and abilities are most common in each region helps trainers optimize team compositions, anticipate battle dynamics, and adapt to competitive landscapes. For researchers, these findings provide a data-driven perspective on how the Pokémon series develops its in-game ecosystems, reinforcing the connection between game mechanics, regional themes, and attribute balance. By engaging with this data, users can uncover new perspectives on the Pokémon universe and explore the intricate relationship between Pokémon attributes and their designed environments.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Fair Use © 2025 Pokémon Data Center</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

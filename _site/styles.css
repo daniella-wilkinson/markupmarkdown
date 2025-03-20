@@ -1,0 +1,9 @@
+/* css styles */
+
+p {text-indent: 2rem}
+
+img {
+  display: flex;
+  margin: auto;
+  padding: auto;
+}

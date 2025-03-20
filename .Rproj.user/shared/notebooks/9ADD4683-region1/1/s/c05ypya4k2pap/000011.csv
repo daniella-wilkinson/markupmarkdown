@@ -1,0 +1,8 @@
+"0","#| echo: false"
+"0",""
+"0","ggplot(reg_type.1, aes(x = Type)) +"
+"0","  geom_bar(fill = ""#FADA7A"") +"
+"0","  ggtitle(""Pokémon Type Distribution in Kanto"") +"
+"0","  labs(x = ""Pokémon Type"", y = ""Frequency"") + "
+"0","  theme_minimal() +"
+"0","  theme(axis.text.x = element_text(angle = 45, hjust = 1))"

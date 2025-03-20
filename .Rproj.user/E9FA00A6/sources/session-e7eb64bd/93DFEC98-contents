@@ -1,0 +1,18 @@
+---
+title: "Welcome Trainer!"
+subtitle: |
+  Explore, analyze, and master the Pokédex with ease—your interactive,  accessible, and engaging guide to Pokémon metadata. Dive into the data  to discover what makes each region distinct, and explore the intricate  relationships between species, climate, and geography.
+  
+title-block-banner: true
+title-block-style: default
+
+page-layout: full
+---
+
+![](images/pokemon%20images/paldea-bg.png){fig-align="center" width="500"}
+
+## Pokémon Data Center {.unlisted}
+
+This resource is an interactive codebook designed to make exploring the Pokédex intuitive, engaging, and accessible for all users. Unlike traditional static codebooks that simply provide information, this interactive version allows users to engage directly with the data. This dynamic approach makes it easier to analyze patterns, compare Pokémon attributes, and gain insights in real-time. Whether you are a researcher, educator, or enthusiast, this codebook offers a seamless way to navigate the Pokédex, providing both an educational and enjoyable experience. Furthermore, this resource emphasizes convenience and cost-effectiveness. As an open-access tool available online, it eliminates the need for expensive software or exclusive memberships. Users can explore the Pokédex freely, making this codebook an invaluable asset for independent learners, educators designing coursework, or researchers conducting statistical analyses.
+
+This resource will be valuable for trainers of all backgrounds interested in data analysis. As I continue to develop the data center, we can improve this resource together. I encourage trainers to regularly utilize this resource to practice their data analysis skills.

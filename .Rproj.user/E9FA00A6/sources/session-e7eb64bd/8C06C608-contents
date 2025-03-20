@@ -1,0 +1,76 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  favicon: "favicon.png"
+  title: "Pokémon Data Center"
+  navbar:
+    search: true
+    left:
+      - text: "Get Started"
+        href: index.qmd
+      - text: "Get Trained"
+        href: lessons.qmd
+        
+      - text: "Pokédex"
+        href: pokedex.qmd
+        
+      - text: "By Region"  
+        menu:
+          - region1.qmd
+          - region2.qmd
+          - region3.qmd
+          - region4.qmd
+          - region5.qmd
+          - region6.qmd
+          - region7.qmd
+          - region8.qmd
+          - region9.qmd
+  
+      # - text: "By Type"
+        # menu:
+          # - type1.qmd
+          # - type2.qmd
+          # - type3.qmd
+          # - type4.qmd
+          # - type5.qmd
+          # - type6.qmd
+          # - type7.qmd
+          # - type8.qmd
+          # - type9.qmd
+          # - type10.qmd
+          # - type11.qmd
+          # - type12.qmd
+          # - type13.qmd
+          # - type14.qmd
+          # - type15.qmd
+          # - type16.qmd
+          # - type17.qmd
+          # - type18.qmd
+      
+      - text: "Docs"
+        icon: github
+        href: https://github.com/daniella-wilkinson/pokemon-data-center
+        aria-label: GitHub
+      
+  page-footer:
+    background: light
+    center: "Fair Use © 2025 Pokémon Data Center" 
+    
+format:
+  html:
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 300px
+      gutter-width: 1.5rem
+      
+    smooth-scroll: true
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual

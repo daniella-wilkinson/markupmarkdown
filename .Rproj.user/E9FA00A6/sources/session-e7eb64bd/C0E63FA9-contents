@@ -1,0 +1,108 @@
+---
+title: "An Exploratory Analysis of Pokémon Metadata"
+subtitle: "Arranging Text, Tables, and Graphs in Quarto"
+format: docx
+editor: visual
+---
+
+```{r setup.1}
+#| include: false
+
+# install packages
+# initialize packages 
+
+library(haven)
+library(ggplot2)
+
+# reconfigure the working directory accordingly
+
+getwd()
+# setwd("~/Dowloads")
+getwd()
+
+# reconfigure the working directory accordingly
+
+list.files()
+
+# configure pokedex 1
+# configure pokedex 2 
+
+pokedex <- read.csv("pokedex.csv"); pokedex$X <- NULL
+pokedex.type <- read.csv("pokedex.type.csv"); pokedex.type$X <- NULL
+```
+
+```{r setup.2}
+#| include: false
+
+# DO NOT EDIT : run code 
+# pokedex by geographic distribution
+
+region.1 <- subset(pokedex, Region == "Kanto", c(
+  Region, ID, Name, Type, Legendary, Sex, Height,
+  Height.ft, Height.Class, Weight, Weight.lbs, Weight.Class, Health, Attack, 
+  Sp.Attack, Defense, Sp.Defense, Speed, Total, Abilities
+))
+
+# DO NOT EDIT : run code 
+# pokedex by type distribution
+
+region.type.1 <- subset(pokedex.type,Region == "Kanto", c(
+  Region, ID, Name, Type, Legendary, Sex, Height,
+  Height.ft, Height.Class, Weight, Weight.lbs, Weight.Class, Health, Attack, 
+  Sp.Attack, Defense, Sp.Defense, Speed, Total, Abilities
+))
+```
+
+# Welcome Trainer!
+
+This demonstration explores the distribution of Pokémon types across
+different regions, revealing how geography and environment influence the
+Pokémon world. By analyzing type frequency by region, users can
+identify patterns in how certain types thrive in specific landscapes.
+The interactive visualizations allow trainers to compare regional
+ecosystems, uncover trends, and gain a deeper understanding of the
+relationship between Pokémon habitats and their elemental traits.
+Designed for educators, researchers, and enthusiasts, this resource
+bridges the gap between game-play and data analysis, offering an
+engaging and accessible way to explore Pokémon metadata.
+
+Understanding the distribution of Pokémon types across different
+regions provides valuable insight into how geography and environment
+shape the Pokémon world. By analyzing type frequency by region, we can
+identify patterns in how certain types thrive in specific landscapes.
+This analysis highlights the ecological diversity within each region and
+deepens our understanding of how Pokémon adapt to their surroundings.
+Beyond identifying patterns, this analysis enhances strategic
+decision-making for trainers and researchers. Understanding which types
+are most common in each region can help trainers anticipate challenges,
+build balanced teams, and appreciate the environmental influences on
+Pokémon availability. For researchers, these insights provide a deeper
+look into how the Pokémon world mirrors real-world biodiversity,
+reinforcing the connection between habitat, adaptation, and survival. By
+engaging with this data, users can uncover new perspectives on the
+Pokémon universe and explore the dynamic relationship between nature and
+Pokémon distribution.
+
+```{r type.dist}
+#| echo: false
+
+ggplot(region.type.1, aes(x = Type)) +
+  geom_bar(fill = "#DD544E") +
+  ggtitle("Pokémon Type Distribution in Kanto") +
+  labs(x = "Pokemon Type", y = "Frequency") + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r health.distribution}
+#| echo: false
+
+ggplot(region.1, aes(x = Health)) + 
+  geom_histogram(binwidth = 10, fill = "#DD544E", color = "white", alpha = 1) +
+  labs(
+    title = "Pokémon Health Distribution in Kanto",
+    x = "Total Health",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```

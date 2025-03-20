@@ -1,0 +1,80 @@
+
+getwd()
+setwd("~/Desktop/Pokémon Data Center/Data")
+getwd()
+
+list.files()
+
+pokedex <- read.csv("pokedex.csv")
+
+region.1 <- read.csv("region.1.csv")
+region.2 <- read.csv("region.2.csv")
+region.3 <- read.csv("region.3.csv")
+region.4 <- read.csv("region.4.csv")
+region.5 <- read.csv("region.5.csv")
+region.6 <- read.csv("region.6.csv")
+region.7 <- read.csv("region.7.csv")
+region.8 <- read.csv("region.8.csv")
+region.9 <- read.csv("region.9.csv")
+
+################################################################################
+
+# DIFFICULTY 
+
+difficulty.level <- c(
+  "level 1" <- 0.80,
+  "level 2" <- 1.00,
+  "level 3" <- 1.25,
+  "level 4" <- 1.50
+)
+
+select.difficulty <- function(level) {
+  return(difficulty.level[[level]])
+}
+
+################################################################################
+
+# DIFFICULTY ASSIGNMENT 
+
+# actionButton("level1", "Level 1")
+# actionButton("level2", "Level 2")
+# actionButton("level3", "Level 3")
+# actionButton("level4", "Level 4")
+
+################################################################################
+
+# PLAYER 1
+
+select.challenger <- function(regional.subset) {
+  min.id <- min(regional.subset$ID)
+  max.id <- max(regional.subset$ID)
+  sample(min.id:max.id, 1)
+}
+
+identify.challenger <- function(regional.subset) {
+  challenger.id <- select.challenger(regional.subset) 
+  print(paste("Challenger ID :", challenger.id)) 
+  regional.subset[regional.subset$ID == challenger.id, ]}
+
+print(challenger <- identify.challenger(region.1))
+
+################################################################################
+
+# PLAYER 2 
+
+pokemon.1_total <- # enter pokémon total
+pokemon.2_total <- # enter pokémon total
+pokemon.3_total <- # enter pokémon total
+  
+team.total <- (pokemon.1_total + player.2_total + player.3_total) / 
+  length(c(pokemon.1_total, player.2_total, player.3_total))
+
+#################################################################################
+
+# POKÉMON BATTLE 
+ 
+print(outcome <- ifelse(team.total >= challenger.total * select.difficulty(level), "You Win", "You Lose"))
+
+
+
+

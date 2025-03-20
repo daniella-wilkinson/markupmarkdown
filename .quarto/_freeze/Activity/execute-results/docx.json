@@ -1,0 +1,17 @@
+{
+  "hash": "6601bebdcd3fa8e4d2f3aeebd8057b67",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"An Exploratory Analysis of Pokémon Metadata\"\nsubtitle: \"Arranging Text, Tables, and Graphs in Quarto\"\nformat: docx\neditor: visual\n---\n\n\n\n\n\n\n\n\n# Welcome Trainer!\n\nThis demonstration explores the distribution of Pokémon types across\ndifferent regions, revealing how geography and environment influence the\nPokémon world. By analyzing type frequency by region, users can\nidentify patterns in how certain types thrive in specific landscapes.\nThe interactive visualizations allow trainers to compare regional\necosystems, uncover trends, and gain a deeper understanding of the\nrelationship between Pokémon habitats and their elemental traits.\nDesigned for educators, researchers, and enthusiasts, this resource\nbridges the gap between game-play and data analysis, offering an\nengaging and accessible way to explore Pokémon metadata.\n\nUnderstanding the distribution of Pokémon types across different\nregions provides valuable insight into how geography and environment\nshape the Pokémon world. By analyzing type frequency by region, we can\nidentify patterns in how certain types thrive in specific landscapes.\nThis analysis highlights the ecological diversity within each region and\ndeepens our understanding of how Pokémon adapt to their surroundings.\nBeyond identifying patterns, this analysis enhances strategic\ndecision-making for trainers and researchers. Understanding which types\nare most common in each region can help trainers anticipate challenges,\nbuild balanced teams, and appreciate the environmental influences on\nPokémon availability. For researchers, these insights provide a deeper\nlook into how the Pokémon world mirrors real-world biodiversity,\nreinforcing the connection between habitat, adaptation, and survival. By\nengaging with this data, users can uncover new perspectives on the\nPokémon universe and explore the dynamic relationship between nature and\nPokémon distribution.\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Activity_files/figure-docx/type.dist-1.png)\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](Activity_files/figure-docx/health.distribution-1.png)\n:::\n:::\n",
+    "supporting": [
+      "Activity_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

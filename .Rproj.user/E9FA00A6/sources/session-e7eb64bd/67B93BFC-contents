@@ -1,0 +1,191 @@
+library(shiny)
+
+# Load Pokémon metadata
+region.1 <- read.csv("region.1.csv")
+
+# Function to randomly select a challenger
+select.challenger <- function(regional.subset) {
+  sample(regional.subset$ID, 1)
+}
+
+# Function to get the challenger's details
+identify.challenger <- function(regional.subset) {
+  challenger.id <- select.challenger(regional.subset)
+  challenger <- regional.subset[regional.subset$ID == challenger.id, ]
+  return(challenger)
+}
+
+# Difficulty levels and modifiers
+difficulty.levels <- list(
+  "Level 1" = 0.80,
+  "Level 2" = 1.00,
+  "Level 3" = 1.25,
+  "Level 4" = 1.50
+)
+
+ui <- fluidPage(
+  tags$head(
+    tags$style(HTML("
+      .centered-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .btn-difficulty {
+        width: 150px;
+        margin: 10px;
+      }
+      .input-box {
+        margin: 10px;
+      }
+    "))
+  ),
+  
+  uiOutput("game_page")
+)
+
+server <- function(input, output, session) {
+  
+  page <- reactiveVal("start")
+  selected_level <- reactiveVal(NULL)
+  challenger <- reactiveVal(NULL)
+  
+  # User-selected Pokémon
+  pokemon.1 <- reactiveVal("")
+  pokemon.2 <- reactiveVal("")
+  pokemon.3 <- reactiveVal("")
+  
+  output$game_page <- renderUI({
+    if (page() == "start") {
+      div(class = "centered-content",
+          h1("Welcome to the Pokémon Battle!"),
+          actionButton("enter", "Enter")
+      )
+      
+    } else if (page() == "level_select") {
+      div(class = "centered-content",
+          h2("Select Your Difficulty Level"),
+          actionButton("level1", "Level 1", class = "btn-difficulty"),
+          actionButton("level2", "Level 2", class = "btn-difficulty"),
+          actionButton("level3", "Level 3", class = "btn-difficulty"),
+          actionButton("level4", "Level 4", class = "btn-difficulty")
+      )
+      
+    } else if (page() == "challenger_reveal") {
+      div(class = "centered-content",
+          h2("Your Challenger Appears!"),
+          h3(paste("Challenger:", challenger()$Pokémon)),
+          actionButton("choose_team", "Choose Your Team")
+      )
+      
+    } else if (page() == "team_selection") {
+      div(class = "centered-content",
+          h2("Choose Your Pokémon!"),
+          textInput("poke1", "Enter Pokémon 1:", value = ""),
+          textInput("poke2", "Enter Pokémon 2:", value = ""),
+          textInput("poke3", "Enter Pokémon 3:", value = ""),
+          actionButton("confirm_team", "Confirm Team")
+      )
+      
+    } else if (page() == "battle") {
+      div(class = "centered-content",
+          h2("Battle Begins!"),
+          h3("Fighting against", challenger()$Pokémon),
+          actionButton("results", "See Results")
+      )
+      
+    } else if (page() == "results") {
+      div(class = "centered-content",
+          h2("Game Results"),
+          h3(textOutput("game_outcome"))
+      )
+    }
+  })
+  
+################################################################################
+  
+# SEQUENCE OF EVENTS
+  
+  # 1️⃣ Player enters game
+  observeEvent(input$enter, {
+    page("level_select")
+  })
+  
+  # 2️⃣ Player selects difficulty
+  observeEvent(input$level1, { selected_level("Level 1"); page("challenger_reveal") })
+  observeEvent(input$level2, { selected_level("Level 2"); page("challenger_reveal") })
+  observeEvent(input$level3, { selected_level("Level 3"); page("challenger_reveal") })
+  observeEvent(input$level4, { selected_level("Level 4"); page("challenger_reveal") })
+  
+  # 3️⃣ Challenger is randomly selected
+  observe({
+    if (page() == "challenger_reveal") {
+      challenger(identify.challenger(region.1))
+    }
+  })
+  
+  # 4️⃣ Player selects their team
+  observeEvent(input$choose_team, {
+    page("team_selection")
+  })
+  
+  observeEvent(input$confirm_team, {
+    pokemon.1(input$poke1)
+    pokemon.2(input$poke2)
+    pokemon.3(input$poke3)
+    page("battle")
+  })
+  
+  # 5️⃣ Battle begins
+  observeEvent(input$results, {
+    withProgress(message = "Processing Battle...", value = 0, {
+      Sys.sleep(0.5)
+      setProgress(0.25, detail = "Calculating battle outcome...")
+      Sys.sleep(0.5)
+      setProgress(0.50, detail = "Applying difficulty modifiers...")
+      Sys.sleep(0.5)
+      setProgress(0.75, detail = "Finalizing results...")
+      Sys.sleep(0.5)
+      setProgress(1, detail = "Battle Complete!")
+    })
+    
+    page("results")
+  })
+  
+  # Function to get a Pokémon's total stat from the dataset
+  get_pokemon_total <- function(name, dataset) {
+    row <- dataset[dataset$Pokémon == name, ]
+    if (nrow(row) > 0) {
+      return(row$Total)
+    } else {
+      return(0)
+    }
+  }
+  
+  # Compute team total
+  team.total <- reactive({
+    sum(
+      get_pokemon_total(pokemon.1(), region.1),
+      get_pokemon_total(pokemon.2(), region.1),
+      get_pokemon_total(pokemon.3(), region.1)
+    )
+  })
+  
+  # Determine results
+  output$game_outcome <- renderText({
+    level <- selected_level()
+    difficulty_modifier <- difficulty.levels[[level]]
+    challenger_total <- challenger()$Total  
+    
+    if (team.total() >= challenger_total * difficulty_modifier) {
+      "You Win!"
+    } else {
+      "You Lose!"
+    }
+  })
+}
+
+shinyApp(ui, server)

@@ -1,0 +1,26 @@
+install.packages(c("MASS", "pscl", "remotes", "countreg"))
+
+remotes::install_github("https://github.com/r-forge/countreg", subdir="pkg")
+
+library(MASS)
+library(pscl)
+library(haven)
+library(remotes)
+library(countreg)
+
+getwd()
+setwd("~/Downloads")
+getwd()
+
+list.files()
+
+blm <- read_dta("cleanBLM.dta")
+suicide <- read_dta("county_suicide.dta")
+
+################################################################################
+
+mean(blm$event_sum)
+var(blm$event_sum)
+
+m1 <- glm.nb(event_sum ~ oc_incol + offset(log(total_p)),
+              data = blm); summary(m1)
